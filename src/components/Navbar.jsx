@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
-  const [menuOpen, setMenuOpen] = useState(false); // State to toggle menu
+  const [menuOpen, setMenuOpen] = useState(false); 
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
@@ -47,7 +47,7 @@ const Navbar = () => {
           </div>
           </ul>
         </div>
-        {/* Hamburger Menu */}
+       
         <div className="hamburger" onClick={toggleMenu}>
           <span className="bar"></span>
           <span className="bar"></span>

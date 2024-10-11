@@ -26,9 +26,7 @@ function About() {
             categorized by business units or departments. To enhance the
             accuracy and ease of tracking, we also integrate GPS functionality
             for automatic commute data tracking. Whether you’re biking, driving,
-            or taking public transport, our system can capture these details
-            without requiring constant manual input. The real-time carbon
-            emissions calculations are powered by the **Carbon Interface API**
+            or taking publ\ powered by the **Carbon Interface API**
             and follow internationally recognized standards like the GHG
             Protocol to ensure accurate and reliable data. By making carbon
             tracking simple and accessible, we empower both individuals and
