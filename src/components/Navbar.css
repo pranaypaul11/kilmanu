@@ -1,0 +1,488 @@
+/* src/components/Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+}
+
+.navbar-logo img{
+  margin-right:2rem ;
+
+  width: 10rem;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links li {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.navbar-links a:hover {
+  color: #4caf50; /* Highlight links on hover */
+}
+
+.navbar-actions .login-btn,
+.navbar-actions .signup-btn {
+  background-color: transparent;
+  border: 1px solid #4caf50;
+  color: #4caf50;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 3px;
+}
+
+.navbar-actions .signup-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.navbar-actions .login-btn:hover,
+.navbar-actions .signup-btn:hover {
+  opacity: 0.8;
+}
+
+
+
+/* src/components/Navbar.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--navbar-bg);
+  color: var(--text-color);
+  z-index: 1000; /* Ensures navbar stays on top */
+}
+
+body {
+  margin-top: 80px; /* Add margin to avoid content overlap with navbar */
+}
+
+.navbar-logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--btn-bg-color);
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links li {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-links a {
+  color: var(--navbar-link-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.navbar-links a:hover {
+  color: #4caf50;
+}
+
+.navbar-actions .login-btn,
+.navbar-actions .signup-btn {
+  background-color: transparent;
+  border: 1px solid var(--btn-bg-color);
+  color: var(--btn-bg-color);
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.navbar-actions .signup-btn {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+}
+
+.theme-toggle {
+  background-color: transparent;
+  border: 1px solid var(--btn-bg-color);
+  color: var(--btn-bg-color);
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* src/components/Navbar.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--navbar-bg);
+  color: var(--text-color);
+  z-index: 1000;
+}
+
+body {
+  margin-top: 80px;
+}
+
+.navbar-logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--btn-bg-color);
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.navbar-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links li {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-links a {
+  color: var(--navbar-link-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.navbar-links a:hover {
+  color: #4caf50;
+}
+
+.navbar-actions .login-btn,
+.navbar-actions .signup-btn {
+  background-color: transparent;
+  border: 1px solid var(--btn-bg-color);
+  color: var(--btn-bg-color);
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.navbar-actions .signup-btn {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  padding: 10px;
+  padding-right: 0px;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--btn-bg-color);
+  transition: 0.3s;
+}
+
+/* Mobile Menu - Hidden by default */
+.navbar-links {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: var(--navbar-bg);
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Menu - Show when active */
+.navbar-links.active {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 1200px) {
+  .navbar-links ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .navbar-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: end;
+    margin-left: auto;
+    
+  }
+
+
+  .navbar-links {
+    flex-direction: column;
+  }
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background-color: transparent;
+  border: 1px solid var(--btn-bg-color);
+  color: var(--btn-bg-color);
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+/* Media Queries for Larger Devices (above 768px) */
+@media (min-width: 1200px) {
+  .navbar-links {
+    display: flex;
+    position: static;
+    width: auto;
+    height: auto;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-actions {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hamburger {
+    display: none; /* Hide the hamburger menu on medium and large screens */
+  }
+}
+
+/* src/components/Navbar.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--navbar-bg);
+  color: var(--text-color);
+  z-index: 1000;
+}
+
+body {
+  margin-top: 80px;
+}
+
+.navbar-logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--btn-bg-color);
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.navbar-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links li {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-links a {
+  color: var(--navbar-link-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.navbar-links a:hover {
+  color: #4caf50;
+}
+
+.navbar-actions .login-btn,
+.navbar-actions .signup-btn {
+  background-color: transparent;
+  border: 1px solid var(--btn-bg-color);
+  color: var(--btn-bg-color);
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.navbar-actions .signup-btn {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Hidden on large screens by default */
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--btn-bg-color);
+  transition: 0.3s;
+}
+
+/* Mobile Menu - Hidden by default */
+.navbar-links {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: var(--navbar-bg);
+  width: 45%;
+  height: 100vh;
+  justify-content: start;
+  align-items: start;
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Menu - Show when active */
+.navbar-links.active {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 1200px) {
+  .navbar-links ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .navbar-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-left: auto; /* Show hamburger menu on mobile screens */
+  }
+
+  .navbar-links {
+    flex-direction: column;
+  }
+}
+
+/* Media Queries for Larger Devices (above 768px) */
+@media (min-width: 1200px) {
+  .navbar-links {
+    display: flex;
+    position: static;
+    width: 30%;
+    height: auto;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .navbar-actions {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hamburger {
+    display: none; /* Hide the hamburger menu on medium and large screens */
+    margin-left: auto;
+  }
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background-color: transparent;
+  border: 1px solid var(--btn-bg-color);
+  color: var(--btn-bg-color);
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 3rem;
+}
+
+.log_sign{
+  display: none;
+}
+
+.item_for_big_devic{
+  align-items: end;
+}
+
+@media (max-width: 750px) {
+  .log_signk{
+    display: none !important;
+  }
+
+  .log_sign{
+    display:block !important;
+  }
+
+}
+
+

@@ -1,0 +1,97 @@
+/* src/components/Navbar.css */
+*{
+  margin: 0;
+  padding: 0;
+}
+/* Default Theme Variables (Light Mode) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000;
+  --navbar-bg: #000000;
+  --navbar-link-color: white;
+  --btn-bg-color: #347928;
+  --btn-text-color: white;
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --navbar-bg: #000000;
+  --navbar-link-color: #f0f0f0;
+  --btn-bg-color: #347928;
+  --btn-text-color: white;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar {
+  background-color: var(--navbar-bg);
+  color: var(--text-color);
+}
+
+.navbar-logo h1 {
+  color: var(--btn-bg-color); /* Klimanu green theme */
+}
+
+.navbar-links a {
+  color: var(--navbar-link-color);
+}
+
+.navbar-actions .login-btn,
+.navbar-actions .signup-btn {
+  background-color: transparent;
+  border: 1px solid var(--btn-bg-color);
+  color: var(--btn-bg-color);
+}
+
+.navbar-actions .signup-btn {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+}
+
+.theme-toggle {
+  background-color: transparent;
+  border: 1px solid var(--btn-bg-color);
+  color: var(--btn-bg-color);
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: .2rem;
+ 
+
+}
+
+
+
+
+.scroll-element {
+  opacity: 0; /* Initially invisible */
+  transform: translateY(50px); /* Initially positioned lower */
+  transition: all 0.8s ease-out; /* Smooth transition for sliding up */
+  margin: 100px 0;
+}
+
+
+
+.scroll-element.in-view {
+opacity: 1; /* Become fully visible */
+transform: translateY(0); /* Slide to the final position */
+}
+
+
+
+
+
+
+
+
+
+
+
+

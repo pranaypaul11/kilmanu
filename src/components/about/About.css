@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .App {
+    font-family: Arial, sans-serif;
+  }
+  
+  .about-section {
+    background-color:var(--hero-bg);
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .about-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .about-section p {
+    font-size: 1.2em;
+  }
+  
+  .mission-section {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .mission-section h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 1em;
+  }
+  
+  .mission-section p {
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.6em;
+    margin-bottom: 2em;
+  }
+ 
