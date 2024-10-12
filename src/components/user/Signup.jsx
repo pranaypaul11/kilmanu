@@ -1,46 +1,143 @@
 import React, { useState } from "react";
-import styles from "./Signup.module.css"; // Importing CSS module
-import { useNavigate,Link } from "react-router-dom";
+import axios from "axios";
+import styles from "./Signup.module.css";
+import { useNavigate, Link } from "react-router-dom";
 
+const baseUrl = "http://localhost:8069";
 
 const Signup = () => {
   const [active, setActive] = useState(false);
-  const navigate=useNavigate()
+  const navigate = useNavigate();
+
+  // State for signup and login inputs
+  const [signupData, setSignupData] = useState({
+    fullName: "",
+    mobile: "",
+    email: "",
+    password: "",
+  });
+
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleSignupInputChange = (e) => {
+    setSignupData({ ...signupData, [e.target.name]: e.target.value });
+  };
+
+  const handleLoginInputChange = (e) => {
+    setLoginData({ ...loginData, [e.target.name]: e.target.value });
+  };
+
+  const signupUser = async () => {
+    try {
+      const response = await axios.post(`${baseUrl}/create_user`, {
+        full_name: signupData.fullName,
+        mobile: signupData.mobile,
+        email: signupData.email,
+        password: signupData.password,
+      });
+
+      console.log("User created successfully:", response.data);
+      navigate("/login"); // Redirect after successful signup
+    } catch (error) {
+      console.error("Error creating user:", error);
+    }
+  };
+
+  const loginUser = async () => {
+    try {
+      const response = await axios.post(`${baseUrl}/web/login`, {
+        email: loginData.email,
+        password: loginData.password,
+      });
+
+      console.log("Login successful:", response.data);
+      navigate("/home");
+    } catch (error) {
+      console.error("Error logging in user:", error);
+    }
+  };
 
   return (
     <div className={`${styles.fullbody}`}>
       <div className={`${styles.container} ${active ? styles.active : ""}`}>
-        {/* Sign Up Form */}
         <div className={`${styles.formContainer} ${styles.signUp}`}>
-          <form action="#">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              signupUser();
+            }}
+          >
             <span className={`${styles.loginText}`}>Create Account</span>
 
-            <input type="text" placeholder="Full Name" />
+            <input
+              type="text"
+              name="fullName"
+              placeholder="Full Name"
+              value={signupData.fullName}
+              onChange={handleSignupInputChange}
+              required
+            />
             <input
               type="tel"
+              name="mobile"
               placeholder="Mobile Number"
-              pattern="[0-9]{10}" // Accept only 10 digits
+              pattern="[0-9]{10}"
               title="Please enter a valid 10-digit phone number"
-              required // Makes this field mandatory
+              value={signupData.mobile}
+              onChange={handleSignupInputChange}
+              required
               maxLength={10}
-            />  
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button type="button">Sign Up</button>
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={signupData.email}
+              onChange={handleSignupInputChange}
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={signupData.password}
+              onChange={handleSignupInputChange}
+              required
+            />
+            <button type="submit">Sign Up</button>
           </form>
         </div>
 
-        {/* Sign In Form */}
         <div className={`${styles.formContainer} ${styles.signIn}`}>
-          <form action="#">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              loginUser();
+            }}
+          >
             <span className={`${styles.loginText}`}>Login</span>
 
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-             <Link to="/forget" >
-              Forgot Password?
-            </Link>
-            <button type="button">Sign In</button>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={loginData.email}
+              onChange={handleLoginInputChange}
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={loginData.password}
+              onChange={handleLoginInputChange}
+              required
+            />
+            <Link to="/forget">Forgot Password?</Link>
+            <button type="submit">Sign In</button>
           </form>
         </div>
 
