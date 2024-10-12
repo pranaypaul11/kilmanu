@@ -48,8 +48,8 @@ function App() {
 
   return (
     <div>
-      {!hideNavbarPaths.includes(location.pathname) && <Navbar />}
-
+      {!hideNavbarPaths.includes(location.pathname)  }
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />

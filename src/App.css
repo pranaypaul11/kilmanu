@@ -11,6 +11,9 @@
   --navbar-link-color: white;
   --btn-bg-color: #347928;
   --btn-text-color: white;
+  --form--container:#ffffff;
+  --fullbody--form:linear-gradient(to right, #e2e2e2, #7889c0);
+  --container-half:white;
 }
 
 /* Dark Theme Variables */
@@ -21,6 +24,9 @@
   --navbar-link-color: #f0f0f0;
   --btn-bg-color: #347928;
   --btn-text-color: white;
+  --form--container:rgb(63, 60, 60);
+  --fullbody--form:linear-gradient(to right, #272525, #17181b);
+  --container-half:rgb(63, 60, 60);
 }
 
 body {
