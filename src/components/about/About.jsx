@@ -27,8 +27,7 @@ function About() {
             accuracy and ease of tracking, we also integrate GPS functionality
             for automatic commute data tracking. Whether you’re biking, driving,
             or taking publ\ powered by the **Carbon Interface API**
-            and follow internationally recognized standards like the GHG
-            Protocol to ensure accurate and reliable data. By making carbon
+            and follow internatand reliable data. By making carbon
             tracking simple and accessible, we empower both individuals and
             organizations to understand their impact and take responsibility for
             reducing emissions. We bridge the gap between daily habits and
