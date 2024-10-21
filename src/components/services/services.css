@@ -1,0 +1,73 @@
+.services-container {
+    padding: 40px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .services-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .services-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .services-header-image {
+    width: 100%;
+    max-width: 600px; /* Set a max width for the image */
+    height: 100%;
+    border-radius: 8px;
+  }
+  
+  .services-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+  }
+  
+  .service-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .service-icon img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .service-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .service-description {
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-bottom: 20px;
+  }
+  
+  .service-btn {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .service-btn:hover {
+    background-color: #333;
+  }
+  

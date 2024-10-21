@@ -12,6 +12,9 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
+import MissionVisionSection from "./components/about/About1";
+import Services1 from "./components/services/Services1";
+import About1 from "./components/about/About1";
 
 function App() {
   const location = useLocation();
@@ -52,8 +55,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Services" element={<Services />} />
+        <Route path="/About" element={<About1 />} />
+        <Route path="/Services" element={<Services1 />} />
         <Route path="/login" element={<Signup />} />
         <Route path="/forget" element={<ForgotPassword />} />
       </Routes>
