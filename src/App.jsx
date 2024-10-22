@@ -15,6 +15,7 @@ import {
 import MissionVisionSection from "./components/about/About1";
 import Services1 from "./components/services/Services1";
 import About1 from "./components/about/About1";
+import LandingPage from "./components/beforeLogin/LandingPage";
 
 function App() {
   const location = useLocation();
@@ -52,13 +53,14 @@ function App() {
   return (
     <div>
       {!hideNavbarPaths.includes(location.pathname)  }
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} />
         <Route path="/About" element={<About1 />} />
         <Route path="/Services" element={<Services1 />} />
         <Route path="/login" element={<Signup />} />
-        <Route path="/forget" element={<ForgotPassword />} />
+        <Route path="/forget" element={<ForgotPassword />} /> */}
+          <Route path="/" element={<LandingPage />} />
       </Routes>
     </div>
   );
